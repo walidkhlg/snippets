@@ -1,0 +1,24 @@
+variable "bucket_name" {}
+
+variable "subnet_ids" {
+  type = "list"
+}
+
+variable "vpc_cidr" {}
+variable "instance_type" {}
+variable "vpc_id" {}
+
+variable "launch_ami" {
+  default = "ami-9cbe9be5"
+}
+
+variable "asg_max" {}
+variable "asg_min" {}
+variable "asg_capacity" {}
+variable "asg_grace" {}
+
+variable "dbhost" {}
+variable "db_user" {}
+variable "db_password" {}
+variable "db_name" {}
+variable "dbread" {}
