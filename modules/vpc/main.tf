@@ -41,15 +41,7 @@ resource "aws_subnet" "public2_subnet" {
   }
 }
 
-#
-resource "aws_db_subnet_group" "rds_subnetgroup" {
-  name       = "rds_subnet_group"
-  subnet_ids = ["${aws_subnet.rds1_subnet.id}", "${aws_subnet.rds2_subnet.id}"]
 
-  tags {
-    Name = "rds-subnet-group"
-  }
-}
 
 # private subnets
 resource "aws_subnet" "rds1_subnet" {

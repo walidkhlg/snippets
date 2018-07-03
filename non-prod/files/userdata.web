@@ -1,17 +1,17 @@
 #!/bin/bash
 yum update -y
+yum install unzip -y
 yum install -y httpd php php-mysqlnd
 echo 'Setenv DB_USER ${dbuser}'  >> /etc/httpd/conf/httpd.conf
 echo 'Setenv DB_NAME ${dbname}' >> /etc/httpd/conf/httpd.conf
 echo 'Setenv DB_PASS ${dbpass}' >> /etc/httpd/conf/httpd.conf
 echo 'Setenv DB_HOST ${dbhost}' >> /etc/httpd/conf/httpd.conf
 echo 'Setenv DB_READ_HOST ${dbreadname}' >> /etc/httpd/conf/httpd.conf
-echo 'Setenv CLOUD_FRONT_DOMAIN ${cloudfront}' >> /etc/httpd/conf/httpd.conf
 service httpd start
 chkconfig httpd on
 easy_install awscli
-aws s3 cp s3://${bucket_name}/index.php /var/www/html/
-aws s3 cp s3://${bucket_name}/history.php /var/www/html/
+aws s3 cp s3://${bucket_name}/App.zip /var/www/html/
+unzip /var/www/html/App.zip -d /var/www/html/
 aws s3 cp s3://${logs_bucket}/log.sh ~/
 chmod +x log.sh
 echo "*/60 * * * * sudo /bin/bash /home/ec2-user/log.sh" >> /var/spool/cron/ec2-user

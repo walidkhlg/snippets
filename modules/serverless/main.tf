@@ -8,7 +8,7 @@ resource "aws_lambda_function" "func1" {
   role             = "${aws_iam_role.lambda_exec.arn}"
 
   vpc_config {
-    subnet_ids         = ["${var.subnet_ids[0]}", "${var.subnet_ids[1]}"]
+    subnet_ids         = ["${var.subnet_ids["public1"]}", "${var.subnet_ids["public2"]}"]
     security_group_ids = ["${var.private_sg_id}"]
   }
 
@@ -32,7 +32,7 @@ resource "aws_lambda_function" "func2" {
   role             = "${aws_iam_role.lambda_exec.arn}"
 
   vpc_config {
-    subnet_ids         = ["${var.subnet_ids[0]}", "${var.subnet_ids[1]}"]
+    subnet_ids         = ["${var.subnet_ids["public1"]}", "${var.subnet_ids["public2"]}}"]
     security_group_ids = ["${var.private_sg_id}"]
   }
 

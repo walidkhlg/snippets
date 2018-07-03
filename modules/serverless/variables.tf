@@ -10,7 +10,9 @@ variable "db_password" {}
 
 variable "db_read" {}
 
-variable "subnet_ids" {}
+variable "subnet_ids" {
+  type = "map"
+}
 
 variable "private_sg_id" {}
 
