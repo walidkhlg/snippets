@@ -7,35 +7,13 @@ data "aws_availability_zones" "available" {}
 
 variable "vpc_id" {}
 
-variable "cidrs" {
-  type = "map"
-}
-
-variable "subnet_ids" {
-  type = "map"
-}
-
-data "aws_subnet_ids" "private" {
-  vpc_id = "${var.vpc_id}"
-
-  tags {
-    "airbus:network" = "private"
-  }
-}
-
-data "aws_subnet_ids" "local" {
-  vpc_id = "${var.vpc_id}"
-
-  tags {
-    "airbus:network" = "local"
-  }
-}
+variable "db_instance_count" {}
 
 variable "kms_key" {}
 variable "instance_type" {}
 
 variable "launch_ami" {
-  default = "ami-9cbe9be5"
+  default = "ami-25aaa6cf"
 }
 
 variable "ec2_role" {}

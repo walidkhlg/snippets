@@ -1,19 +1,16 @@
+data "aws_subnet_ids" "private" {
+  vpc_id = "${var.vpc_id}"
 
-
-variable "subnet_ids" {
-  type = "map"
+  tags {
+    "airbus:network" = "private"
+  }
 }
 
-variable "kms_key_id" {}
-
-variable "app_file" {}
 variable "iam_role" {}
 variable "instance_type" {}
 variable "vpc_id" {}
 
-variable "launch_ami" {
-  default = "ami-25aaa6cf"
-}
+variable "launch_ami" {}
 
 variable "asg_max" {}
 variable "asg_min" {}
