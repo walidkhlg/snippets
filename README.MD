@@ -36,5 +36,11 @@ Each module will deployed the following resources:
 ##### Module Database
 ![diagram](doc/database.jpg)
 
-#### Module Serverless
+##### Module Serverless
 ![diagram](doc/lambda.jpg)
+
+##### Module VPC
+![diagram](doc/vpc.jpg)
+##### Example
+You can combine modules to define an architecture that fits your needs . Example :
+![diagram](doc/example.jpg)
