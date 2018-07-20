@@ -2,7 +2,7 @@
 These [Terraform](https://terraform.io) snippets can be used to deploy ressources and test them using [AWSPEC](https://github.com/k1LoW/awspec).
 
 the project contains two main folders for terraform , one for non production environment and one for prod .
-The preferred method is to keep seperate state files for each environment , so we deploy the stack in non prod environment , and run the tests to check that terraform behaves as expected , if everything is ok we can switch to prod
+The preferred method is to keep seperate state files for each environment , so we deploy the stack in non prod environment , and run the tests to check that terraform behaves as expected , if everything is ok we can switch to prod.
 
 
 
@@ -52,6 +52,10 @@ You can combine modules to define an architecture that fits your needs . Example
 After configuring the stack and setting up the prerequisites, initialize terraform :
 ```
 terraform init
+```
+Load the modules :
+```
+terraform get
 ```
 
 Terraform plan to get an overview of what terraform will be deploying :
