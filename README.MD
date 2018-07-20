@@ -18,9 +18,15 @@ gem install rake
 ```
 ### Get AWS Credentials
 Use the platform auth cli to get your AWS credentials .
+
 Configure environment variables with the appropriate AWS profile and region. Example :
 ```
 AWS_PROFILE=role-test
 AWS_REGION=eu-west-1
 ```
-#
+### Deploying the stack
+
+#### Configure variables
+Modify the variables.tf file with the appropriate values for the modules variables .
+
+Each module will deployed the following resources:
