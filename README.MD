@@ -31,4 +31,10 @@ Modify the variables.tf file with the appropriate values for the modules variabl
 
 Each module will deployed the following resources:
 ##### Module Application
-![Screenshot](./doc/autoscaling.png)
+![Screenshot](https://github.com/walidkhlg/snippets/tree/master/doc/autoscaling.png)
+
+##### Module Database
+![Screenshot](https://github.com/walidkhlg/snippets/tree/master/doc/database.png)
+
+#### Module Serverless
+![Screenshot](https://github.com/walidkhlg/snippets/tree/master/doc/lambda.png)
