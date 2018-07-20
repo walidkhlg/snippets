@@ -17,7 +17,7 @@ Install rake.
 gem install rake
 ```
 ### Get AWS Credentials
-Use the platform auth cli to get your AWS credentials
+Use the platform auth cli to get your AWS credentials .
 Configure environment variables with the appropriate AWS profile and region. Example :
 ```
 AWS_PROFILE=role-test
