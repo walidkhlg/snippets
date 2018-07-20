@@ -30,3 +30,5 @@ AWS_REGION=eu-west-1
 Modify the variables.tf file with the appropriate values for the modules variables .
 
 Each module will deployed the following resources:
+##### Module Application
+![Screenshot](./doc/autoscaling.png)
