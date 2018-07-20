@@ -6,7 +6,8 @@ These [Terraform](https://terraform.io) snippets can be used to deploy ressource
 ## Getting started
 
 ### Prerequisites
-[Install Terraform](https://www.terraform.io/intro/getting-started/install.html) .
+[Install Terraform](https://www.terraform.io/intro/getting-started/install.html).
+
 Install AWSPEC with gem.
 ```
 gem install awspec
