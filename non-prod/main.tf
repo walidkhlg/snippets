@@ -31,3 +31,13 @@ module "application" {
   instance_type = "${var.instance_type}"
   iam_role      = "${var.ec2_role}"
 }
+
+/*module "serverless" {
+  source           = "../modules/serverless"
+  db_host          = "${module.database.dbhost}"
+  db_read          = "${module.database.dbread}"
+  db_password      = "${var.db_password}"
+  db_user          = "${var.db_password}"
+  lambda_runtime   = "${var.lambda_runtime}"
+  deployment_stage = "${var.deployment_stage}"
+}*/

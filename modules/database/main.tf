@@ -23,7 +23,7 @@ resource "aws_rds_cluster_instance" "cluster-instance1" {
 }
 
 resource "aws_rds_cluster_instance" "cluster-instance2" {
-  identifier         = "aurora-cluster-web-1"
+  identifier_prefix  = "aurora-cluster-db-instance"
   instance_class     = "${var.db_instance_class}"
   cluster_identifier = "${aws_rds_cluster.db-cluster.id}"
 
@@ -33,7 +33,7 @@ resource "aws_rds_cluster_instance" "cluster-instance2" {
 }
 
 resource "aws_rds_cluster_instance" "cluster-instance3" {
-  identifier         = "aurora-cluster-web-2"
+  identifier_prefix  = "aurora-cluster-db-instance"
   instance_class     = "${var.db_instance_class}"
   cluster_identifier = "${aws_rds_cluster.db-cluster.id}"
 

@@ -14,7 +14,7 @@ subnet_ids = {
 }
 bucket_name = "s3-walid-web"
 # autoscaling
-instance_type = "t2.medium"
+instance_type = "t2.micro"
 
 asg_capacity = "2"
 
