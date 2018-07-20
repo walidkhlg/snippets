@@ -65,7 +65,7 @@ terraform apply
 
 ### Running tests
 
-Once the ressources are provisionned , we need to make sure that terraform behaved as we expected and the created ressources are properly configured , run the tests by running :
+Once the ressources are provisionned , we need to make sure that terraform behaved as we expected and the created ressources are properly configured , run the tests by running in the non prod folder:
 ```
-terraform apply
+rake
 ```
