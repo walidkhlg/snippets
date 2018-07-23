@@ -17,9 +17,7 @@ resource "aws_rds_cluster_instance" "cluster-instance1" {
   instance_class     = "${var.db_instance_class}"
   cluster_identifier = "${aws_rds_cluster.db-cluster.id}"
 
-  tags {
-    Name = "web-db-1"
-  }
+  tags = "${var.db_instance_tags}"
 }
 
 resource "aws_rds_cluster_instance" "cluster-instance2" {
@@ -27,9 +25,7 @@ resource "aws_rds_cluster_instance" "cluster-instance2" {
   instance_class     = "${var.db_instance_class}"
   cluster_identifier = "${aws_rds_cluster.db-cluster.id}"
 
-  tags {
-    Name = "web-db-2"
-  }
+  tags = "${var.db_instance_tags}"
 }
 
 resource "aws_rds_cluster_instance" "cluster-instance3" {
@@ -37,9 +33,7 @@ resource "aws_rds_cluster_instance" "cluster-instance3" {
   instance_class     = "${var.db_instance_class}"
   cluster_identifier = "${aws_rds_cluster.db-cluster.id}"
 
-  tags {
-    Name = "web-db-3"
-  }
+  tags = "${var.db_instance_tags}"
 }
 
 # subnet group for rds

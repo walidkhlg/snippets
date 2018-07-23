@@ -23,6 +23,12 @@ asg_max = "4"
 asg_min = "2"
 
 asg_grace = "600"
+
+autoscaling_instance_tags {
+key                 = "Name"
+propagate_at_launch = true
+value               = "asg-web"
+}
 # Database
 db_instance_class = "db.t2.medium"
 
@@ -33,6 +39,12 @@ db_user = "walid"
 db_password = "password123"
 
 db_instance_count = 2
+
+db_instance_tags {
+"airbus:application_code" = "C2E2"
+"airbus:environment"      = "creteste2e"
+"airbus:stage"            = "dev"
+}
 # lambda & API Gateway
 lambda_runtime="python3.6"
 

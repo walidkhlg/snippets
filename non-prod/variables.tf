@@ -16,21 +16,31 @@ variable "launch_ami" {
   default = "ami-25aaa6cf"
 }
 
+variable "autoscaling_instance_tags" {
+  type = "map"
+}
+
 variable "ec2_role" {}
 variable "asg_max" {}
 variable "asg_min" {}
 variable "asg_capacity" {}
 variable "asg_grace" {}
 
+variable "db_name" {}
+variable "db_user" {}
+variable "db_instance_class" {}
+variable "db_password" {}
+
 variable "db_engine" {
   default = "aurora-mysql"
+}
+
+variable "db_instance_tags" {
+  type = "map"
 }
 
 variable "rest_api_name" {}
 variable "lambda_runtime" {}
 variable "deployment_stage" {}
-variable "db_name" {}
-variable "db_user" {}
-variable "db_instance_class" {}
-variable "db_password" {}
+
 data "aws_caller_identity" "current" {}

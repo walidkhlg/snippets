@@ -5,13 +5,16 @@ data "aws_subnet_ids" "private" {
     "airbus:network" = "private"
   }
 }
+variable "tags" {
+  type = "map"
+
+}
 
 variable "iam_role" {}
 variable "instance_type" {}
 variable "vpc_id" {}
 
 variable "launch_ami" {}
-
 variable "asg_max" {}
 variable "asg_min" {}
 variable "asg_capacity" {}

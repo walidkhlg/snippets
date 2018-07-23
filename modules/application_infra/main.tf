@@ -14,8 +14,6 @@ resource "aws_launch_configuration" "web-lc" {
   security_groups      = ["${aws_security_group.sg-private.id}"]
   iam_instance_profile = "${aws_iam_instance_profile.web_s3_profile.id}"
 
-  #user_data = "${data.template_file.userdata.rendered}"
-
   lifecycle {
     create_before_destroy = true
   }
@@ -33,11 +31,12 @@ resource "aws_autoscaling_group" "web-asg" {
   vpc_zone_identifier       = ["${data.aws_subnet_ids.private.ids}"]
   launch_configuration      = "${aws_launch_configuration.web-lc.name}"
 
-  tag {
+  /*tag {
     key                 = "Name"
     propagate_at_launch = true
     value               = "asg-web"
-  }
+  }*/
+  tags = ["${var.tags}"]
 }
 
 ####### Security Groups ####################
@@ -174,6 +173,6 @@ resource "aws_elb" "web-elb" {
   connection_draining_timeout = 400
 
   tags {
-    Name = "web-elb-walid"
+    Name = "web-elb"
   }
 }

@@ -13,6 +13,7 @@ module "database" {
   db_instance_class = "${var.db_instance_class}"
   private_sg_id     = "${module.application.private_sg_id}"
   kms_key_id        = "${var.kms_key}"
+  db_instance_tags  = "${var.db_instance_tags}"
 }
 
 module "application" {
@@ -30,6 +31,7 @@ module "application" {
   db_password   = "${var.db_password}"
   instance_type = "${var.instance_type}"
   iam_role      = "${var.ec2_role}"
+  tags          = ["${var.autoscaling_instance_tags}"]
 }
 
 /*module "serverless" {
