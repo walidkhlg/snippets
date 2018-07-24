@@ -36,7 +36,7 @@ resource "aws_autoscaling_group" "web-asg" {
     propagate_at_launch = true
     value               = "asg-web"
   }*/
-  tags = ["${var.tags}"]
+  tags = "${var.tags}"
 }
 
 ####### Security Groups ####################

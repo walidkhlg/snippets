@@ -17,7 +17,7 @@ variable "launch_ami" {
 }
 
 variable "autoscaling_instance_tags" {
-  type = "map"
+  type = "list"
 }
 
 variable "ec2_role" {}

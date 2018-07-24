@@ -6,8 +6,7 @@ data "aws_subnet_ids" "private" {
   }
 }
 variable "tags" {
-  type = "map"
-
+  type = "list"
 }
 
 variable "iam_role" {}
